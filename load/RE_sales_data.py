@@ -33,9 +33,9 @@ for thisFile in fileList:
         last_comma = line.rfind(',')
         new_date = line[last_comma+1:len(line)-1].split('/')
         if (len(new_date[0]) == 1):
-          new_date[0] = "0" + new_date[0];
+          new_date[0] = "0" + new_date[0]
         if (len(new_date[1]) == 1):
-          new_date[1] = "0" + new_date[1];          
+          new_date[1] = "0" + new_date[1]         
         new_date_final = "," + new_date[2] + new_date[0] + new_date[1] + " \n"
         line = line[0:last_comma] + new_date_final
       f_final.write(line)
